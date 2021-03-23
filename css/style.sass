@@ -1,0 +1,80 @@
+*
+  opacity: 1 !important
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap')
+
+$section-container-width: 960px
+$section-padding: 24px
+
+$header-recuo-desktop: -80px
+
+=flex
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  align-content: flex-start
+
+=flex-center
+  +flex
+  justify-content: center
+  align-items: center
+  align-content: center
+
+=flex-top-center
+  +flex
+  justify-content: center
+
+=font-regular
+  font-weight: 300
+
+=font-bold
+  font-weight: 700
+
+body
+  font-family: 'Open Sans', sans-serif
+
+.preload
+  position: absolute
+  width: 0
+  height: 0
+  opacity: 0
+  z-index: -1
+  overflow: hidden
+
+.section
+  display: block
+  width: 100%
+  padding-left: $section-padding
+  padding-right: $section-padding
+
+.section-container
+  +flex
+  width: $section-container-width
+  margin: 0 auto
+  min-height: 100%
+
+.header
+  height: 238px
+  background-image: url("../img/header-aprenda-a-bordar-tapetes-min.jpg")
+
+.header .section-container
+  +flex-center
+
+.header .logo
+  margin-top: $header-recuo-desktop
+
+.landing-title
+  margin-top: $header-recuo-desktop
+
+.landing-title main
+  +flex-center
+  background: #802623
+  padding: 22px 0
+  border: 6px solid #fff
+
+.landing-title h1
+  +font-regular
+  color: #fff
+  width: 600px
+  text-align: center
