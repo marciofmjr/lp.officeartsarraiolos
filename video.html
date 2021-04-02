@@ -18,7 +18,7 @@
 
   <div class="video"></div>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Az9PdCn5tmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Az9PdCn5tmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
   <br>
 
@@ -32,7 +32,8 @@
   <script>
     $( document ).ready(function() {
         $("button").on("click", function () {
-          console.log("Vai carregar o vídeo");
+          var videoWrapper = $(".video");
+          videoWrapper.html('<iframe allowfullscreen frameborder="0" class="embed-responsive-item" src="https://www.youtube.com/embed/Az9PdCn5tmE"></iframe>')
         })
     });
   </script>
