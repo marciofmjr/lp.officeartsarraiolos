@@ -29,6 +29,10 @@ $cta-background: #2e9e28
   +flex
   justify-content: center
 
+=flex-space-between
+  +flex
+  justify-content: space-between
+
 =font-regular
   -webkit-font-smoothing: antialiased
   font-weight: 400
@@ -39,7 +43,6 @@ $cta-background: #2e9e28
 
 body
   font-family: 'Open Sans', sans-serif
-  padding-bottom: 1000px
 
 strong
   +font-bold
@@ -93,19 +96,19 @@ strong
   width: 600px
   text-align: center
 
-.video
+.section.video
   margin-top: 40px
 
-.video .section-container .row
+.section.video .section-container .row
   +flex-center
 
-.video iframe
+.section.video iframe
   width: 640px
   height: 360px
   background: #000
   border: 4px solid #000
 
-.video .title
+.section.video .title
   +font-regular
   display: block
   margin: 0 auto
@@ -140,12 +143,12 @@ strong
   &:active
     background-color: darken($cta-background, 20%)
 
-.more-details
+.section.more-details
   margin-top: 50px
   padding-top: 10px
   background-color: #f1ece3
 
-.more-details .title
+.section.more-details .title
   +font-regular
   display: block
   width: 100%
@@ -154,7 +157,7 @@ strong
   color: #363637
   text-transform: uppercase
 
-.more-details .subtitle
+.section.more-details .subtitle
   +font-regular
   display: block
   width: 100%
@@ -162,80 +165,302 @@ strong
   font-size: 25px
   color: #846919
 
-.more-details .image-content
+.section.more-details .image-content
   +flex
 
-.more-details .image-content .image
+.section.more-details .image-content .image
   width: 40%
   position: relative
 
-.more-details .image-content .image img
+.section.more-details .image-content .image img
   display: block
 
-.more-details .image-content .image .author
+.section.more-details .image-content .image .author
   position: absolute
   right: 25px
   bottom: 30px
   font-style: italic
   font-size: 15px
 
-.more-details .image-content .image .author strong
+.section.more-details .image-content .image .author strong
   display: block
   width: 100%
 
-.more-details .image-content .content
+.section.more-details .image-content .content
   width: 60%
   margin-top: 30px
 
-.more-details .image-content p
+.section.more-details .image-content p
   display: block
   width: 100%
   font-size: 25px
 
-.more-details .image-content ul
+.section.more-details .image-content ul
   display: block
   width: 100%
   margin-top: 10px
 
-.more-details .image-content ul li
+.section.more-details .image-content ul li
   +font-bold
   list-style: none
   font-size: 25px
   color: #846919
 
-.features
+.section.features
   padding-top: 30px
   padding-bottom: 30px
 
-.features .title
+.section.features .title
   +font-regular
   font-size: 51px
   line-height: 51px
   text-align: center
   width: 660px
 
-.features .box-container
+.section.features .box-container
   +flex-center
   align-items: flex-start
   margin-top: 60px
 
-.features .box
+.section.features .box
   width: 25%
   padding: 12px
 
-.features .box .icon
+.section.features .box .icon
   +flex-center
   height: 90px
 
-.features .box .icon img
+.section.features .box .icon img
   width: 60px
 
-.features .box p
+.section.features .box p
   display: block
   width: 100%
   text-align: center
   font-size: 16px
   color: #383737
 
-.features .cta
+.section.features .cta
   margin-top: 48px
+
+.section.additional
+  margin-top: 30px
+  background: #000
+  padding-top: 24px
+  padding-bottom: 42px
+
+.section.additional .title
+  +font-regular
+  color: #fff
+  font-size: 36px
+  text-align: center
+
+.section.additional ul
+  +flex-space-between
+  margin-top: 80px
+
+.section.additional ul li
+  max-width: 25%
+
+.section.additional ul li img
+  display: block
+
+.section.additional ul li strong
+  display: block
+  width: 100%
+  text-align: center
+  color: #fff
+  font-size: 30px
+  text-transform: uppercase
+  margin-top: 18px
+
+.section.additional .disclaimer
+  +font-regular
+  display: block
+  width: 100%
+  text-align: center
+  color: #fff
+  font-size: 36px
+  margin-top: 80px
+
+.section.additional .disclaimer strong
+  text-transform: uppercase
+
+.section.additional .cta
+  margin-top: 42px
+
+.section.depositions
+  padding-top: 50px
+  padding-bottom: 62px
+
+.section.depositions .title
+  display: block
+  width: 100%
+  text-align: center
+  font-size: 36px
+
+.section.depositions .title strong
+  text-transform: uppercase
+
+.section.depositions ul
+  +flex-space-between
+  margin-top: 36px
+
+.section.depositions ul li
+  list-style: none
+  text-align: center
+  font-size: 16px
+  width: 260px
+  max-width: 33.3333333333%
+  padding: 6px
+
+.section.depositions ul li .video
+  display: block
+  width: 100%
+  min-height: 150px
+  background: #000
+  margin-top: 12px
+
+.section.depositions .called
+  display: block
+  width: 100%
+  text-align: center
+  font-size: 26px
+  margin-top: 48px
+
+.section.depositions .cta
+  margin-top: 54px
+
+.section.satisfaction
+  background-color: #155611
+  padding-top: 36px
+  padding-bottom: 36px
+
+.section.satisfaction .row
+  +flex-space-between
+
+.section.satisfaction .image
+  width: 230px
+
+.section.satisfaction p
+  +font-regular
+  width: calc(100% - 230px)
+  padding-left: 24px
+  color: #fff
+  font-size: 16px
+
+.section.price
+  padding-top: 36px
+  padding-bottom: 42px
+
+.section.price .row-title
+  +flex-center
+
+.section.price .title
+  display: block
+  width: 680px
+  color: #f40103
+  font-size: 36px
+  text-transform: uppercase
+  text-align: center
+
+.section.price .alert-message
+  +font-bold
+  display: block
+  width: 100%
+  color: #fff
+  background: #f40103
+  text-align: center
+  padding: 6px
+  font-size: 22px
+  text-transform: uppercase
+  margin-top: 20px
+
+.section.price .price-from
+  +font-bold
+  display: block
+  width: 100%
+  text-align: center
+  margin-top: 22px
+  font-size: 38px
+  text-transform: uppercase
+
+.section.price .price-from strong
+  position: relative
+  color: #f40103
+
+.section.price .price-to
+  +font-bold
+  display: block
+  width: 100%
+  text-align: center
+  font-size: 25px
+
+.section.price .price-to strong
+  font-size: 90px
+
+.section.price .tips
+  +font-bold
+  display: block
+  width: 100%
+  text-align: center
+  margin-top: 12px
+  font-size: 33px
+  text-transform: uppercase
+
+.section.price .cta
+  margin-top: 36px
+
+.section.price .payments
+  display: block
+  width: 100%
+  margin-top: 22px
+
+.section.price .payments ul
+  +flex-center
+
+.section.price .payments ul li
+  list-style: none
+  margin: 0 5px
+
+.section.price .payments ul li.text
+  +font-bold
+  font-size: 10px
+  text-transform: uppercase
+  line-height: 12px
+  color: #888
+
+.section.price .payments ul li.mastercard img
+  width: 40px
+
+.section.price .payments ul li.visa img
+  width: 50px
+
+.section.price .payments ul li.hypercard img
+  width: 44px
+
+.section.price .payments ul li.american-express img
+  width: 36px
+
+.section.price .payments ul li.elo img
+  width: 50px
+
+.section.price .payments ul li.diners-club img
+  width: 80px
+
+.section.price .payments ul li.boleto img
+  width: 42px
+
+.section.price .payments ul li.paypal img
+  width: 68px
+
+.section.price .payments ul li.separator span
+  display: block
+  width: 2px
+  height: 50px
+  background: #b1b1b1
+
+footer
+  background-color: #802623
+  width: 100%
+  height: 80px
