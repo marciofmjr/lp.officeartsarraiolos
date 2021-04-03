@@ -23,15 +23,10 @@
 <body>
 
   <div class="video-container">
-    <div id="video1Link" class="video-image" onclick="loadVideo(this, event, 'Az9PdCn5tmE')"></div>
-  </div>
-  <div class="video-container">
-    <div id="video2Link" class="video-image" onclick="loadVideo(this, event, 'Pi6dEmfRKJI')"></div>
-  </div>
-  <div class="video-container">
-    <div id="video3Link" class="video-image" onclick="loadVideo(this, event, 'FLXnAww-8U8')"></div>
+    <div id="video1Link" class="video-image" onclick="loadVideo(this, event, 'FLXnAww-8U8', false)"></div>
   </div>
 
+  <!-- <iframe width="560" height="315" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/Az9PdCn5tmE?rel=0&amp;autoplay=1&amp;loop=0&amp;showinfo=0&amp;controls=0&amp;mute=1&amp;enablejsapi=1&amp;widgetid=1"></iframe> -->
 
   <script>
     var simulateClick = function (elem) {
@@ -43,15 +38,13 @@
       var canceled = !elem.dispatchEvent(evt);
     };
 
-    // setTimeout(function () {
-    //   simulateClick(document.querySelector('#video1Link'));
-    //   simulateClick(document.querySelector('#video2Link'));
-    //   simulateClick(document.querySelector('#video3Link'));
-    // }, 1000)
+    setTimeout(function () { simulateClick(document.querySelector('#video1Link')); }, 500)
 
-    function loadVideo(element, event, videoId) {
+    function loadVideo(element, event, videoId, autoplay = false) {
       var container = element.parentElement;
-      container.innerHTML = '<iframe width="560" height="315" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/'+videoId+'?rel=0&amp;loop=0&amp;showinfo=0&amp;controls=0&amp;mute=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>';
+      var autoplayParam = autoplay ? "1": "0";
+      var muteParam = autoplay ? "1": "0";
+      container.innerHTML = '<iframe width="560" height="315" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/'+videoId+'?rel=0&amp;autoplay='+autoplayParam+'&amp;loop=0&amp;showinfo=0&amp;controls=0&amp;mute='+muteParam+'&amp;enablejsapi=1&amp;widgetid=1"></iframe>';
     }
   </script>
 
