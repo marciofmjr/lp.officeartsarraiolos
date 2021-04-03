@@ -7,7 +7,7 @@ var simulateClick = function (elem) {
   var canceled = !elem.dispatchEvent(evt);
 };
 
-function loadVideo(element, videoId, width, height, autoplay = false, controls = false) {
+function loadVideo(element, videoId, width, height, autoplay = false, controls = true) {
   var container = element.parentElement;
   var autoplayParam = autoplay ? "1": "0";
   var muteParam = autoplay ? "1": "0";
